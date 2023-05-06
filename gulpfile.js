@@ -18,6 +18,9 @@ const paths = {
     js: 'src/js/**/*.js',
     html: 'src/page/**/*.html',
     tpl: 'src/tpl/**/*.html',
+    font: 'src/font/**/*',
+    img: 'src/img/**/*',
+    lib: 'src/lib/**/*',
   },
   dist: {
     css: 'dist/css',
@@ -82,6 +85,9 @@ function browserSyncTask() {
   gulp.watch(paths.src.scss, gulp.series(compileSass)).on('change', browserSync.reload);
   gulp.watch(paths.src.js, gulp.series(minifyJs)).on('change', browserSync.reload);
   gulp.watch(paths.src.tpl, gulp.series(minifyHtml)).on('change', browserSync.reload);
+  gulp.watch(paths.src.font, gulp.series('font')).on('change', browserSync.reload);
+  gulp.watch(paths.src.img, gulp.series('img')).on('change', browserSync.reload);
+  gulp.watch(paths.src.lib, gulp.series('lib')).on('change', browserSync.reload);
 }
 
 
