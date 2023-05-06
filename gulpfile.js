@@ -95,20 +95,32 @@ function cleanDev() {
   return gulp.src('dev', { allowEmpty: true, read: false }).pipe(clean());
 }
 
-// // 监听文件变化
-// function watchFiles() {
-//   gulp.watch(paths.src.scss, compileSass);
-//   gulp.watch(paths.src.js, minifyJs);
-//   gulp.watch(paths.src.html, minifyHtml);
-//   gulp.watch(paths.src.tpl, minifyHtml);
 
-// }
+
+// 处理 lib 文件夹任务
+gulp.task('lib', function() {
+  return gulp.src('src/lib/**/*') // 选择 lib 文件夹下的所有文件
+    .pipe(gulp.dest('dist/lib')) // 将文件输出到 dist/lib 目录
+    .pipe(gulp.dest('dev/lib'))
+});
+// 处理 img 文件夹任务
+gulp.task('img', function() {
+  return gulp.src('src/img/**/*') // 选择 img 文件夹下的所有文件
+    .pipe(gulp.dest('dist/img')) // 将文件输出到 dist/img 目录
+    .pipe(gulp.dest('dev/img'))
+});
+// 处理font 文件夹任务
+gulp.task('font', function() {
+  return gulp.src('src/font/**/*') // 选择 font 文件夹下的所有文件
+    .pipe(gulp.dest('dist/font')) // 将文件输出到 dist/font 目录
+    .pipe(gulp.dest('dev/font'))
+});
 
 // 开发模式任务
-gulp.task('dev', gulp.series(cleanDev, gulp.parallel(compileSass, minifyJs, minifyHtml), browserSyncTask));
+gulp.task('dev', gulp.series(cleanDev, 'lib', 'img', 'font', gulp.parallel(compileSass, minifyJs, minifyHtml), browserSyncTask));
 
 // 构建模式任务
-gulp.task('build', gulp.series(cleanDist, gulp.parallel(compileSass, minifyJs, minifyHtml)));
+gulp.task('build', gulp.series(cleanDist,'lib', 'img', 'font', gulp.parallel(compileSass, minifyJs, minifyHtml)));
 
 // 默认任务为开发模式
 gulp.task('default', gulp.series('dev'));
