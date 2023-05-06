@@ -10,22 +10,24 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
+const browserSync = require('browser-sync').create();
 
 const paths = {
   src: {
     scss: 'src/scss/**/*.scss',
     js: 'src/js/**/*.js',
     html: 'src/page/**/*.html',
+    tpl: 'src/tpl/**/*.html',
   },
   dist: {
     css: 'dist/css',
     js: 'dist/js',
-    html: 'dist/html',
+    html: 'dist',
   },
   dev: {
     css: 'dev/css',
     js: 'dev/js',
-    html: 'dev/html',
+    html: 'dev',
   },
 };
 
@@ -60,10 +62,28 @@ function minifyHtml() {
     .src(paths.src.html)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(fileinclude({ prefix: '@@', basepath: __dirname + '/src/tpl/'  }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(gulp.dest(paths.dist.html))
-    .pipe(gulp.dest(paths.dev.html));
+    .pipe(gulp.dest(paths.dev.html))
+    .pipe(browserSync.stream());
 }
+
+function browserSyncTask() {
+  browserSync.init({
+    server: {
+      baseDir: './dev', // 指定根目录
+    },
+    port: 3000, // 设置端口号
+    open: true, // 自动打开浏览器
+  });
+
+  // 监听文件变化，并触发重新加载页面
+  gulp.watch(paths.src.html, gulp.series(minifyHtml)).on('change', browserSync.reload);
+  gulp.watch(paths.src.scss, gulp.series(compileSass)).on('change', browserSync.reload);
+  gulp.watch(paths.src.js, gulp.series(minifyJs)).on('change', browserSync.reload);
+  gulp.watch(paths.src.tpl, gulp.series(minifyHtml)).on('change', browserSync.reload);
+}
+
 
 // 清理 dist 文件夹
 function cleanDist() {
@@ -75,15 +95,17 @@ function cleanDev() {
   return gulp.src('dev', { allowEmpty: true, read: false }).pipe(clean());
 }
 
-// 监听文件变化
-function watchFiles() {
-  gulp.watch(paths.src.scss, compileSass);
-  gulp.watch(paths.src.js, minifyJs);
-  gulp.watch(paths.src.html, minifyHtml);
-}
+// // 监听文件变化
+// function watchFiles() {
+//   gulp.watch(paths.src.scss, compileSass);
+//   gulp.watch(paths.src.js, minifyJs);
+//   gulp.watch(paths.src.html, minifyHtml);
+//   gulp.watch(paths.src.tpl, minifyHtml);
+
+// }
 
 // 开发模式任务
-gulp.task('dev', gulp.series(cleanDev, gulp.parallel(compileSass, minifyJs, minifyHtml), watchFiles));
+gulp.task('dev', gulp.series(cleanDev, gulp.parallel(compileSass, minifyJs, minifyHtml), browserSyncTask));
 
 // 构建模式任务
 gulp.task('build', gulp.series(cleanDist, gulp.parallel(compileSass, minifyJs, minifyHtml)));

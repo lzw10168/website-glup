@@ -23,7 +23,7 @@
         index.html
         about.html
         archive.html
-    - scss/             (所有样式打包成 main.min.css 单文件)
+    - scss/             (所有样式打包成 app.min.css 单文件)
       + component/      (组件类)
       + core/           (核心样式)
       + dependencies/   (第三方依赖)
@@ -57,5 +57,8 @@
   gulpfile.js           (Gulp 配置)
   package.json          (项目配置)
 
+
+* npm run start -- 
+* npm run build -- 
 
 
