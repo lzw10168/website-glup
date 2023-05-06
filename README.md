@@ -1,3 +1,8 @@
+基于gulp的前端自动化工作流
+=========================
+> 本项目是基于gulp的前端自动化工作流，主要用于前端开发过程中的自动化构建、代码校验、文件压缩、图片压缩、文件合并、文件重命名、文件监听、浏览器自动刷新、本地服务器等功能。
+> website 网站构建中, 通用header, footer
+
 - project/
   - dist/               (打包文件)
     - css/
@@ -10,7 +15,7 @@
         index.html
         about.html
         archive.html
-  + dev/                (开发预览，样式脚本都未合并或混合，方便调试)
+  + dev/                (开发预览)
   - src/
     + font/             (Icon)
     + img/              (项目用图形图标)
@@ -46,14 +51,6 @@
         site-topbar.html
         site-footer.html
   .gitignore            (Gulp task 代码校验配置、Git 版本控制配置)
-  .babelrc
-  .csslintrc
-  .eslintignore
-  .eslintrc
-  .htmlhintrc
-  .jshintignore
-  .jshintrc
-  .scss-lint.yml
   gulpfile.js           (Gulp 配置)
   package.json          (项目配置)
 
