@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const htmlmin = require('gulp-htmlmin');
 const fileinclude = require('gulp-file-include');
 const clean = require('gulp-clean');
@@ -54,7 +55,7 @@ function minifyJs() {
     .src(paths.src.js)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(gulp.dest(paths.dist.js))
     .pipe(gulp.dest(paths.dev.js));
 }
@@ -75,6 +76,8 @@ function browserSyncTask() {
   browserSync.init({
     server: {
       baseDir: './dev', // 指定根目录
+      index: 'index.html', // 指定默认路由为 index.html
+
     },
     port: 3000, // 设置端口号
     open: true, // 自动打开浏览器
