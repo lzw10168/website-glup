@@ -1,0 +1,137 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.navbar-a7ff7dddf889 {
+  /* 矩形 82 */
+  position: relative;
+  height: 72px;
+  opacity: 1;	
+  background: var(--bg-color);
+  transition: all 0.3s ease-in-out;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  .navbar-brand_logo {
+    height: 32px;
+    width: 32px;
+  }
+  .navbar-brand_title {
+    font-size:24px;
+  }
+  .navbar-nav {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .nav-menu {
+      padding: 0 10px;
+      position: relative;
+      .nav-submenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        // width: 200px;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 10px;
+        background-color: var(--bg-color);
+        li {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  .search {
+    color: var(--text-color);
+    margin-left: auto;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+}
+
+.navbar-a7ff7dddf888 {
+  /* 矩形 82 */
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+  height: 72px;
+  opacity: 1;	
+  background: var(--bg-color);
+  padding: 0 24px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  .navbar-brand_logo {
+    height: 32px;
+    width: 32px;
+  }
+  .navbar-brand_title {
+    font-size:24px;
+  }
+  .navbar-menu_btn {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid var(--text-color);
+    .bi-list {
+      font-size: 20px;
+    }
+  }
+  .offcanvas {
+    background: var(--bg-color);
+    .offcanvas-header {
+      padding-top: 30px;
+    }
+    .close {
+      color: var(--text-color) !important;
+    }
+    .nav-menu {
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      border-top: 2px solid var(--text-color);
+      padding: 10px 0;
+      position: relative;
+      .bi-dash-lg {
+        display: none;
+      }
+    }
+
+
+    .nav-submenu {
+      display: none;
+      padding: 10px 0 30px 0;
+      li {
+        padding: 3px 0;
+      }
+    }
+  }
+}
+
+
+// .navbar-a7ff7dddf889 大于768px才显示
+@media screen and (max-width: 768px) {
+  .navbar-a7ff7dddf889 {
+    display: none;
+  }
+}
+
+// .navbar-a7ff7dddf888 小于768px才显示
+@media screen and (max-width: 768px) {
+  .navbar-a7ff7dddf888 {
+    display: flex;
+  }
+}
+

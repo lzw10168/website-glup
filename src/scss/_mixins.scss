@@ -1,0 +1,30 @@
+html {
+
+  body {
+    li {
+      list-style: none;
+
+    }
+    overflow-x: hidden;
+    color: var(--text-color);
+    // min-width: 1280px;
+    // background-color: var(--bg-color);
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    i {
+      color: var(--text-color);
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+    .rotate::before{
+      transform: rotate(180deg);
+    }
+  }
+}
