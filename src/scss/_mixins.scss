@@ -1,6 +1,7 @@
 html {
 
   body {
+    background-color: var(--bg-color);
     li {
       list-style: none;
 
@@ -27,4 +28,28 @@ html {
       transform: rotate(180deg);
     }
   }
+  .pt-24 {
+    padding-top: 24px;
+  }
+  .mt-24 {
+    margin-top: 24px;
+  }
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+  .pb-24 {
+    padding-bottom: 24px;
+  }
+  .px-12 {
+    background-color: var(--bg-color);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .border-top-1 {
+    border-top: 1px solid var(--text-color);
+  }
+
 }

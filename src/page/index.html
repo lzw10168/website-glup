@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/pages/index.min.css">
-  @@include('page-head.html')
+  <!-- @@include('page-head.html') -->
+  <template src="page-head.html"> </template>
 
 </head>
 
 <body>
 
   <body>
-    @@include('page-header.html')
+    <!-- @@include('page-header.html') -->
     <template src="page-header.html">
 
     </template>
     <div class="index_first-container">
-      <video autoplay class="background"
-        src="https://openaicomproductionae4b.blob.core.windows.net/production-twill-01/121dd5e0-eaea-424d-bdf2-db02ca1f5e55/gpt-4-92586ac_1080p60.mp4"></video>
+      <video autoplay class="background" src="./img/video.mp4"></video>
       <!-- <img src="./img/index_1.jpg" alt="" class="background"> -->
       <h3 class="title">探索AI新世界，一站式体验智能互动。</h3>
       <div class="experience">
@@ -31,117 +31,210 @@
     <div class="px-12">
 
       <!-- container2 -->
-      <div class="container2  pt-24">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="item">
-
-              <div class="title">
-                AI聚合平台为您提供一站式服务
-              </div>
-              <a class="link subtitle">
-                <span>
-                  关于我们
-                </span>
-                <i class="bi bi-chevron-double-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="item">
-
-              <div class="title">
-                推出视听读写的完整AI能力
-              </div>
-              <a class="link subtitle">
-                <span>
-                  最新更新
-                </span>
-                <i class="bi bi-chevron-double-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="item">
-
-              <div class="title">
-                高效创作的全生态AI智能工具
-
-              </div>
-              <a class="link subtitle">
-                <span>
-                  我们的产品
-                </span>
-                <i class="bi bi-chevron-double-right"></i>
-            </div>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="item">
-
-              <div class="title">
-                期待与您携手共创AI的时代
-              </div>
-              <a class="link subtitle">
-                <span>
-                  平台合作
-                </span>
-                <i class="bi bi-chevron-double-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <template src="component-normal-four.html">
+        {
+        data: [
+        {
+        title: 'AI聚合平台为您提供一站式服务',
+        link: '关于我们',
+        href: './'
+        },
+        {
+        title: '推出视听读写的完整AI能力',
+        link: '最新更新',
+        href: './'
+        },{
+        title: '高效创作的全生态AI智能工具',
+        link: '我们的产品',
+        href: './'
+        },{
+        title: '期待与您携手共创AI的时代',
+        link: '平台合作',
+        href: './'
+        },
+        ]
+        }
+      </template>
 
       <!-- container3 Ai聊天 -->
-      <div class="container3 border-top-2  pt-24">
-        <div class="row">
-          <div class="item col-md-6 col-sm-12">
-            <img class="img" src="./img/index_3.jpg" alt="">
-          </div>
-          <div class="item  item-text col-md-6 col-sm-12">
-            <div class="title">AI聊天</div>
-            <div class="subtitle">
-              我们已经训练了一个名为 ChatGPT 的模型，它以对话方式进行交互。对话形式使 ChatGPT 可以回答后续问题、承认错误、挑战不正确的前提并拒绝不适当的请求。
-            </div>
-            <a class="link text">
-              <span>
-                立即体验
-              </span>
-              <i class="bi bi-chevron-double-right"></i>
-            </a>
-          </div>
+      <template src="component-normal-two.html">
+        {
+        imgpath: './img/index_3.jpg',
+        title: 'AI聊天',
+        subtitle: '我们已经训练了一个名为 ChatGPT 的模型，它以对话方式进行交互。对话形式使 ChatGPT 可以回答后续问题、承认错误、挑战不正确的前提并拒绝不适当的请求。',
+        link: '立即体验',
+        href: './',
+        }
+      </template>
+      <template src="component-normal-two.html">
+        {
+        imgpath: './img/index_4.jpg',
+        title: 'AI画板',
+        subtitle: '我们集聚多项AI创作工具于一体，结合AI绘画、图生图、垫图生成、生成相似图，抠图，图像外延等多项智能工具于AI画板，致力为各行各业解决不同的创作难题',
+        link: '立即体验',
+        href: './',
+        }
+      </template>
+      <!-- 最近更新 -->
+
+      <template src="component-des-a.html">
+        {
+        title: '最近更新',
+        subtitle: '',
+        link: '查看所有玩法',
+        href: './',
+        textalign: 'text-right'
+        }
+      </template>
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: 'AI语音',
+        imgpath: './img/new_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '文字识别',
+        imgpath: './img/new_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '图像识别',
+        imgpath: './img/new_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '图像增强与特效',
+        imgpath: './img/new_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+      <!-- 行业领域 -->
+      <template src="component-des-a.html">
+        {
+        title: '行业领域',
+        subtitle: '基于作文的理解能力、评语能力，让AI像老师一样批改作文；覆盖课标话题，实现类人自由对话与实时发音测评，让语言学习再次升级。手写要点、会议纪要；语篇规整，稿件成文效率大幅提升；一段录音，一键成稿。',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '教育-AI智能解答',
+        imgpath: './img/business_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '创意-AI创作高效生产',
+        imgpath: './img/business_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '办公-高效图文处理',
+        imgpath: './img/business_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '音频-AI语音生成',
+        imgpath: './img/business_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+
+      <!-- 产品服务 -->
+      <template src="component-des-a.html">
+        {
+        title: '产品服务',
+        subtitle:
+        'AI智能大语言模型机器翻译多种语言的文字，包括英语、中文、法语、德语、西班牙语等常用语种。文本摘要根据文本提取简洁而准确的摘要，快速理解文章的核心观点,历史人文提供有关历史事件、文化传承、名人故事、名言警句等方面的文案。',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '语言理解',
+        imgpath: './img/prodc_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '知识问答',
+        imgpath: './img/prodc_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '逻辑推理',
+        imgpath: './img/prodc_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: 'AI绘画创作',
+        imgpath: './img/prodc_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+
+      <!-- 商业效益 -->
+      <template src="component-des-a.html">
+        {
+        title: '商业效益',
+        subtitle: '平台提供最新的安全最佳实践模型和指南。采用流式的接口设计，首帧响应最快可达毫秒级。借助高效算法与架构，能在极短时间处理大量用户请求，数据加密与访问控制等多重手段确保用户隐私安全。',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+      <div class="component-normal-four-img">
+
+        <div class="img">
+          <img src="./img/xiaoyi.png" alt="">
         </div>
-
       </div>
-      <div class="container3 border-top-2  pt-24">
-        <div class="row">
+      <!-- 鼓励 -->
+      <template src="component-normal-two-b.html">
+        {
+        imgpath: './img/guli.png',
+        title: `“我鼓励我的团队继续学习。不同主题或领域的想法往往能激发出新的想法，拓宽潜在的解决方案空间。”`,
+        text1: '我们的理念',
+        text2: '开放蓝天AI人工智能',
+        }
+      </template>
 
-          <div class="item item-text col-md-6 col-sm-12">
-            <div class="title">AI画板</div>
-            <div class="subtitle">
-              我们集聚多项AI创作工具于一体，结合AI绘画、图生图、垫图生成、生成相似图，抠图，图像外延等多项智能工具于AI画板，致力为各行各业解决不同的创作难题 </div>
-            <a class="link text">
-              <span>
-                立即体验
-              </span>
-              <i class="bi bi-chevron-double-right"></i>
-            </a>
-          </div>
-          <div class=" item col-md-6 col-sm-12">
-            <img class="img" src="./img/index_4.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
+      <!-- 加入我们 -->
+      <template src="component-join.html">
+        {
+        title: '加入我们，共同体验技术的革新。',
+        btnText: '查看详情',
+        href: './',
+        }
+      </template>
     </div>
 
-    @@include('page-footer.html')
+    <template src="page-footer.html">
+
 
   </body>
 
 
-  @@include('page-foot.html')
+  <template src="page-foot.html">
+
+  </template>
 
 
 

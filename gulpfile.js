@@ -66,13 +66,15 @@ function minifyHtml() {
   return gulp
     .src(paths.src.html)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(fileinclude({ prefix: '@@', basepath: __dirname + '/src/tpl/'  }))
     .pipe(htmlTpl({
       tag: 'template',
+      paths: ['./src/tpl'],
       engine: function(template, data) {
         return template && artTemplate.compile(template)(data);
       }
     }))
+    // .pipe(fileinclude({ prefix: '@@', basepath: __dirname + '/src/tpl/'  }))
+    
     .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.dist.html))
