@@ -12,7 +12,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const browserSync = require('browser-sync').create();
-
+const htmlTpl = require('gulp-html-tpl');
+const artTemplate = require('art-template');
 const paths = {
   src: {
     scss: 'src/scss/**/*.scss',
@@ -66,7 +67,14 @@ function minifyHtml() {
     .src(paths.src.html)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(fileinclude({ prefix: '@@', basepath: __dirname + '/src/tpl/'  }))
+    .pipe(htmlTpl({
+      tag: 'template',
+      engine: function(template, data) {
+        return template && artTemplate.compile(template)(data);
+      }
+    }))
     .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(paths.dist.html))
     .pipe(gulp.dest(paths.dev.html))
     .pipe(browserSync.stream());
