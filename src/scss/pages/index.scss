@@ -5,7 +5,22 @@
   width: 100%;
   overflow-x: hidden;
   height: 100vh;
-
+  #video_control {
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    position: absolute;
+    right: 10px;
+    bottom: 10%;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  #video_control:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    i {
+      color: var(--bg-color);
+    }
+  }
   .background {
     position: absolute;
     top: 0;
@@ -62,6 +77,21 @@
 
 }
 
+@media screen and (max-width: 768px) {
+  #video_control {
+    background-color: transparent;
+    .text{
+      display: none;
+    }
+  }
+  #video_control:hover {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    i {
+      color: var(--text-color);
+    }
+  }
+}
 
 
 

@@ -47,3 +47,23 @@ $(window).scroll(function () {
 $('#back-top').click(function () {
   $('html, body').animate({ scrollTop: 0 }, 300)
 })
+
+
+{/* <i class="bi bi-play-fill"></i> <span class="text">
+          继续播放
+        </span>
+        <!-- <i class="bi bi-pause-fill"></i> <span class="text">
+          暂停播放
+        </span> --> */}
+
+$('#video_control').click(function () {
+  if ($(this).children('i').hasClass('bi-play-fill')) {
+    $(this).children('i').removeClass('bi-play-fill').addClass('bi-pause-fill')
+    $(this).children('.text').text('暂停播放')
+    $('video')[0].play()
+  } else {
+    $(this).children('i').removeClass('bi-pause-fill').addClass('bi-play-fill')
+    $(this).children('.text').text('继续播放')
+    $('video')[0].pause()
+  }
+})
