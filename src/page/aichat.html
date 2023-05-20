@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开放蓝天</title>
+  <link rel="stylesheet" href="./css/pages/aichat.min.css">
+  <template src="page-head.html"> </template>
+</head>
+
+<body>
+
+  <body>
+    <div class="aichat px-24">
+
+      <template src="page-header.html">
+
+      </template>
+      <div class="aichat_first-container">
+        <div class="row">
+          <div class="col-lg-2 col-sm-12 col-sm-12">
+          </div>
+          <div class="col-lg-10 col-sm-12 col-sm-12">
+            <h3 class="title">我们的AI能够基于自然对话方式理解与执行任务。</h3>
+            <div class="experience">
+              <div class="mtBtn">开启对话 <i class="bi bi-arrow-up-right"></i>
+              </div>
+              <div class="text">只需一个指令 “懂你所言，答你所问，创你所需，解你所难，学你所教”。</div>
+            </div>
+            <img class="background" src="./img/aichat_1.png"></img>
+          </div>
+        </div>
+      </div>
+
+      <template src="component-chat-title.html">
+        {
+        title: 'AI大模型，拥有跨领域的知识和语言理解能力从海量数据和大规模知识中持续进化，实现从提出、规划到解决问题的全流程闭环。',
+        }
+      </template>
+
+
+      <template src="component-chat-label.html">
+        {
+        title: '创造力',
+        }
+      </template>
+
+      <template src="component-chat-type.html">
+        {
+        desc: '具有创造性和协作性它可以生成、编辑并与用户一起迭代创意和技术写作任务，例如创作歌曲、编写剧本或学习用户的写作风格。',
+        inputText: '用一个句子解释灰姑娘的情节，其中每个单词生动形象带有感情并结合修辞手法，不重复任何字。',
+        inputImgPath: '',
+        color: '',
+        outputText: '美丽的灰姑娘，热切的栖居，终于获得幸福；激起嫉妒的亲人，爱情神奇地孕育出富贵的王子；悄悄拯救，拖鞋胜利，团结无比，热心青年。'
+        }
+      </template>
+
+      <template src="component-chat-label.html">
+        {
+        title: '图片',
+        }
+      </template>
+
+      <template src="component-chat-type.html">
+        {
+        desc: '可以接受图像作为输入并生成说明、分类和分析。',
+        inputText: '可乐为什么是黑色的？',
+        inputImgPath: './img/kele.png',
+        className: 'img',
+        outputText: '可乐发黑原因是因为其配料中含有焦糖。焦糖是用饴糖、蔗糖等熬成的粘稠液体或粉末，深褐色，焦糖是一种在食品中应用范围十分广泛的天然着色剂、是食品添加剂中的重要一员。'
+        }
+      </template>
+      <template src="component-chat-title-b.html">
+        {
+        title: '超强推理能力运用已有的知识来分析。',
+        }
+      </template>
+
+      <!-- 对比 -->
+      <div class="row mb-48">
+        <div class="col-md-6 col-sm-12">
+          <template src="component-chat-type-b.html">
+            {
+            title: '普通AI',
+            inputText: `Andrew 上午 11 点到下午 3 点有空，Joanne 中午到下午 2 点有空，然后是下午 3:30 到 5 点。Hannah 中午有空半小时，然后是下午 4 点到 6
+            点。Andrew、Hannah 和 Joanne 的 30 分钟会议的开始时间有哪些选择？`,
+            outputText: `以下是他们的可用性列表： - Andrew：上午 11 点至下午 3 点Joanne：中午至下午 2 点，以及下午 3:30 至 5 点 - Hannah：中午至中午 12:30，以及下午
+            4
+            点至 6
+            点他们的可用性，有一个 30 分钟的窗口，他们三个都可以使用，从下午 4 点到 4:30。所以，会议可以安排在下午 4 点。`
+            }
+          </template>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <template src="component-chat-type-b.html">
+            {
+            title: '蓝天AI',
+            inputText: `AAndrew 上午 11 点到下午 3 点有空，Joanne 中午到下午 2 点有空，然后是下午 3:30 到 5 点。Hannah 中午有空半小时，然后是下午 4 点到 6
+            点。Andrew、Hannah 和 Joanne 的 30 分钟会议的开始时间有哪些选择？`,
+            outputText: `安德鲁：上午 11 点至下午 3 点乔安妮：中午 12 点至下午 2 点、下午 3:30 至下午 5 点汉娜：中午 12 点至中午 12:30、下午 4 点至下午 6 点 30
+            分钟会议的公共可用性：中午 12 点至 12 点:30 点.`,
+            className: 'green'
+            }
+          </template>
+        </div>
+        <!-- 添加更多子元素 -->
+      </div>
+      <template src="component-des-a.html">
+        {
+        title: '知识问答',
+        subtitle: '提供有关日常生活的知识，如饮食、运动、旅游等方面的建议，提供工作方面的知识，如沟通技巧、时间管理技巧、团队协作等方面的建议等等',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '生活常识',
+        imgpath: './img/aichat_replay_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '工作技能',
+        imgpath: './img/aichat_replay_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '医学知识',
+        imgpath: './img/aichat_replay_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '历史人文',
+        imgpath: './img/aichat_replay_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+      <template src="component-des-a.html">
+        {
+        title: '语言理解',
+        subtitle: 'AI查语法错误并提供正确的语法建议，使写作更加规范与专业，根据文本提取简洁而准确的摘要，快速理解文章的核心观点分析文本中的情感色彩，如正面、负面或中性更好了解内容观点和态度等等',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '机器翻译',
+        imgpath: './img/aichat_lang_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '文本摘要',
+        imgpath: './img/aichat_lang_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '语法检查',
+        imgpath: './img/aichat_lang_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '情感分析',
+        imgpath: './img/aichat_lang_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+      <template src="component-des-a.html">
+        {
+        title: '产品优势',
+        subtitle: '开放蓝天AI大模型胜任多场景需求，从实时天气查询、影音娱乐到机票预订，在同一个窗口完成更多场景化任务。接入互联网，获取实时资讯信息，并且在垂直领域获得源源不断的知识补充，实现更全面的大模型。',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+
+      <!-- 加入我们 -->
+      <template src="component-join.html">
+        {
+        title: '加入我们，共同体验技术的革新。',
+        btnText: '查看详情',
+        href: './',
+        }
+      </template>
+    </div>
+
+    <template src="page-footer.html">
+
+
+  </body>
+
+
+  <template src="page-foot.html">
+
+  </template>
+
+</body>
+
+</html>

@@ -1,7 +1,9 @@
 
 :root {
   --bg-color: #000;
+    --text-color-a8: #A8A8A8;
     --text-color: #fff;
+    --color-2d: #2d2d2d;
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --success-color: #28a745;
@@ -23,17 +25,21 @@
   // --info-color: #17a2b8;
   // }
   // 字体大小
+  --font-140: 140px;
   --font-72: 72px;
   --font-48: 48px;
   --font-36: 36px;
   --font-28: 28px;
   --font-24: 24px;
-  // --font-20: 20px;
-  // --font-18: 18px;
+  --font-20: 20px;
+  --font-18: 18px;
   --font-16: 16px;
+  --font-14: 14px;
+  --font-12: 12px;
 
 
   @media (max-width: 1280px) {
+    --font-140: 96px;
     --font-72: 48px;
     --font-48: 36px;
 
@@ -46,6 +52,7 @@
   }
 
   @media (max-width: 768px) {
+    --font-140: 72px;
     --font-72: 32px;
     --font-48: 32px;
     --font-36: 28px;

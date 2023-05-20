@@ -28,17 +28,25 @@ $('.nav-menu').click(function (e) {
 
 // 当出现滚动条距离顶部大于5px, .navbar-a7ff7dddf889, 和 .navbar-a7ff7dddf888的background-color变为透明
 
+function changeTabTransparent() {
+  $('.navbar-a7ff7dddf889').css('background-color', 'transparent')
+  // 子集 .nav-submenu 的 background-color 也要变为透明
+  $('.navbar-a7ff7dddf889 .navbar-nav .nav-menu .nav-submenu').css('background-color', 'transparent')
+  // navbar-brand_logo src change to logo_dark.png
+  $('.navbar-brand img').attr('src', './img/logo_dark.png')
+  $('.navbar-a7ff7dddf888').css('background-color', 'transparent')
+}
+changeTabTransparent()
+
 $(window).scroll(function () {
   if ($(this).scrollTop() > 5) {
     $('.navbar-a7ff7dddf889').css('background-color', 'var(--bg-color)')
     $('.navbar-a7ff7dddf889 .navbar-nav .nav-menu .nav-submenu').css('background-color', 'var(--bg-color)')
+    $('.navbar-brand img').attr('src', './img/logo_right.png')
 
     $('.navbar-a7ff7dddf888').css('background-color', 'var(--bg-color)')
   } else {
-    $('.navbar-a7ff7dddf889').css('background-color', 'transparent')
-    // 子集 .nav-submenu 的 background-color 也要变为透明
-    $('.navbar-a7ff7dddf889 .navbar-nav .nav-menu .nav-submenu').css('background-color', 'transparent')
-    $('.navbar-a7ff7dddf888').css('background-color', 'transparent')
+    changeTabTransparent()
   }
 }
 )
@@ -67,3 +75,36 @@ $('#video_control').click(function () {
     $('video')[0].pause()
   }
 })
+
+
+
+var delay = 100; // 每个字符的打字速度
+var interval = 5000; // 清空文字后的间隔时间
+
+function typeWriter(element, text, index) {
+  if (index < text.length) {
+    $(element).text(text.substring(0, index + 1));
+    setTimeout(function () {
+      typeWriter(element, text, index + 1);
+    }, delay);
+  } else {
+    setTimeout(function () {
+      clearText(element);
+    }, interval);
+  }
+}
+
+function clearText(element) {
+  $(element).text('');
+  var text = $(element).data('text');
+  setTimeout(function () {
+    typeWriter(element, text, 0);
+  }, delay);
+}
+
+$(document).ready(function () {
+  $('.output-type_text').each(function () {
+    var text = $(this).data('text');
+    typeWriter(this, text, 0);
+  });
+});

@@ -37,13 +37,65 @@ html {
   .mb-24 {
     margin-bottom: 24px;
   }
+  .mb-48 {
+    margin-bottom: 48px;
+  }
+  .mt-48 {
+    margin-bottom: 48px;
+  }
+  .mb-96 {
+    margin-bottom: 96px;
+  }
   .pb-24 {
     padding-bottom: 24px;
   }
-  .px-12 {
-    background-color: var(--bg-color);
+  .px-24 {
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .py-24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .py-48 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .py-96 {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .px-48 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .px-96 {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+  .mx-24 {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .mx-48 {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .mx-96 {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .my-24 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .my-48 {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .my-96 {
+    margin-top: 96px;
+    margin-bottom: 96px;
   }
   .text-right {
     text-align: right;
@@ -52,4 +104,47 @@ html {
     border-top: 1px solid var(--text-color);
   }
 
+  .bt-2d {
+    border-top: 1px solid var(--color-2d);
+  }
+  .bb-2d {
+    border-bottom: 1px solid var(--color-2d);
+  }
+  .input-cursor {
+
+    height: 14px;
+    display: inline-block;
+    // inline-block居中
+    vertical-align: text-bottom;
+    width: 6px;
+    background-color: #fff;
+    animation: blink 1s infinite;
+  }
+
+  .mtBtn {
+    padding: 4px 11px 6px 11px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid var( --text-color);
+    color: var( --text-color);
+  }
+  .mtBtn:hover {
+    background-color: var( --text-color);
+    color: var( --bg-color);
+    i {
+      color: var( --bg-color);
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }

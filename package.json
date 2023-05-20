@@ -27,9 +27,11 @@
     "rimraf": "^5.0.0"
   },
   "dependencies": {
+    "art-template": "^4.13.2",
     "browser-sync": "^2.29.1",
     "del": "^7.0.0",
     "gulp-clean-css": "^4.3.0",
+    "gulp-html-tpl": "^0.5.2",
     "sass": "^1.62.1"
   }
 }
