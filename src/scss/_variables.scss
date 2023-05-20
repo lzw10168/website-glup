@@ -27,6 +27,7 @@
   // 字体大小
   --font-140: 140px;
   --font-72: 72px;
+  --font-58: 58px;
   --font-48: 48px;
   --font-36: 36px;
   --font-28: 28px;
@@ -41,6 +42,7 @@
   @media (max-width: 1280px) {
     --font-140: 96px;
     --font-72: 48px;
+    --font-58: 48px;
     --font-48: 36px;
 
     // --font-36: 28px;
@@ -52,8 +54,9 @@
   }
 
   @media (max-width: 768px) {
-    --font-140: 72px;
-    --font-72: 32px;
+    --font-140: 48px;
+    --font-72: 38px;
+    --font-58: 36px;
     --font-48: 32px;
     --font-36: 28px;
     --font-28: 24px;

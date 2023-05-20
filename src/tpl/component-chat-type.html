@@ -4,6 +4,12 @@
       <div class="text">
         {{desc}}
       </div>
+      <div class="link mt-1">
+        <a href="{{href}}">
+          {{link}}
+        </a>
+        <i class="bi bi-chevron-double-right"></i>
+      </div>
     </div>
     <div class="item col-md-6 col-sm-12">
       <div class="type-item">
@@ -26,7 +32,9 @@
           <div class="label">
             输出
           </div>
-
+          <div class="{{outputImgClassName}}">
+            <img src="{{outputImgPath}}" alt="">
+          </div>
           <div class="output-type">
             <span class="output-type_text" data-text="{{outputText}}">
 

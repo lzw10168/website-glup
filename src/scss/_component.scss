@@ -280,12 +280,22 @@
   }
 }
 
+.search-modal {
+  .modal-content {
+    background-color: var(--bg-color);
+  }
+  .modal-body {
+
+
+  }
+}
 
 .component-chat-title {
-    padding: 100px 0;
+    padding: 48px 0;
     border-top: 1px solid var(--color-2d);
     border-bottom: 1px solid var(--color-2d);
     .row {
+      position: relative;
       border-top: 1px solid var( --text-color);
 
     }
@@ -294,9 +304,33 @@
       font-size: var( --font-48);
       color: var( --text-color);
     }
+    .link {
+      position: absolute;
+      text-align: right;
+      top: 12px;
+      right: 0;
+    }
 
 }
 
+.component-draw-two-img {
+  .item {
+    .img {
+      width: 100%;
+    }
+  }
+}
+.component-draw-two-percent {
+  .percent {
+    font-size: var(--font-58);
+    color: var(--text-color);
+  }
+  .text {
+    font-size: var(--font-18);
+    color: var(--text-color);
+
+  }
+}
 .component-join {
   position: relative;
   display: flex;
@@ -382,6 +416,17 @@
   }
   .aichat_first-container {
     height: 900px;
+    // padding-top: 200px;
+  }
+  .aidraw_first-container {
+    height: 900px;
+    padding-top: 250px;
+    .title, .subtitle {
+      padding-right: 0;
+    }
+    .subtitle {
+      width: 80%;
+    }
   }
   .component-normal-four { 
     margin-top: 20px;

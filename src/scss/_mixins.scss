@@ -46,6 +46,9 @@ html {
   .mb-96 {
     margin-bottom: 96px;
   }
+  .mt-96 {
+    margin-top: 96px;
+  }
   .pb-24 {
     padding-bottom: 24px;
   }
@@ -119,6 +122,9 @@ html {
     width: 6px;
     background-color: #fff;
     animation: blink 1s infinite;
+  }
+  .modal-backdrop {
+    display: none;
   }
 
   .mtBtn {

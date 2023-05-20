@@ -44,12 +44,14 @@
         </li>
       </ul>
     </nav>
-    <div class="search">
+    <div class="search" data-bs-toggle="modal" data-bs-target="#myModal">
       搜索
     </div>
   </nav>
 
+  <template src="component-search-modal.html">
 
+  </template>
   <nav class="container-fluid navbar-a7ff7dddf888">
     <h1>
       <img class="navbar-brand_logo" src="./img/logo_right.png" alt="">
@@ -105,6 +107,12 @@
             <li><a class="link" href="#">产品3</a></li>
           </ul>
         </ul>
+
+      </div>
+      <div class="input-group mb-3 px-24 py-24">
+        <input type="text" class="form-control" placeholder="输入关键字搜索" aria-label="输入关键字搜索"
+          aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">搜索</button>
       </div>
     </div>
 

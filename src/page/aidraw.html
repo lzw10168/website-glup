@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开放蓝天</title>
+  <link rel="stylesheet" href="./css/pages/aidraw.min.css">
+  <template src="page-head.html"> </template>
+</head>
+
+<body>
+
+  <body>
+    <div class="aidraw px-24">
+
+      <template src="page-header.html">
+
+      </template>
+      <div class="aidraw_first-container">
+        <div class="row ">
+          <div class="col-lg-2 col-sm-12 col-sm-12">
+          </div>
+          <div class="col-lg-10 col-sm-12 col-sm-12 mb-96">
+            <h3 class="title">开放蓝天AI绘画</h3>
+            <h4 class="subtitle">基于人工智能自动生成技术，让文本和图片成 为AI绘画艺术作品，现在就来创作和分享吧！</h4>
+            <div class="experience">
+              <div class="mtBtn">开启创作 <i class="bi bi-arrow-up-right"></i>
+              </div>
+              <div class="text">创建AI艺术，与他人分享你的，最佳创意。</div>
+            </div>
+          </div>
+          <div id="aidraw-video-container"></div>
+
+        </div>
+      </div>
+      <div class="pt-5"></div>
+      <template src="component-chat-title.html">
+        {
+        title: '热门玩法',
+        link: '查看全部',
+        href: './'
+        }
+      </template>
+
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '概念艺术',
+        imgpath: './img/aidraw/hot_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '人物创作',
+        imgpath: './img/aidraw/hot_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '商业插画',
+        imgpath: './img/aidraw/hot_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '抽象油画',
+        imgpath: './img/aidraw/hot_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+      <template src="component-chat-title-b.html">
+        {
+        title: '可以根据文字描述创建原创、逼真的图像和艺术作品。它可以组合概念、属性和样式。',
+        }
+      </template>
+
+      <template src="component-chat-label.html">
+        {
+        title: '变化',
+        }
+      </template>
+      <template src="component-chat-type.html">
+        {
+        desc: '可以根据自然语言字幕对现有图像进行逼真的编辑。它可以在考虑阴影、反射和纹理的同时添加和删除元素。',
+        inputText: '想要一个眼神坚韧，很酷的黑人机甲女战士。',
+        link: "立即探索",
+        href: './',
+        inputImgPath: '',
+        className: 'd-none',
+        outputImgPath: './img/aidraw/change_1.png',
+        outputImgClassName: 'img',
+        outputText: ''
+        }
+      </template>
+      <template src="component-chat-title-b.html">
+        {
+        title: '我们最新的系统以 四倍的分辨率生成更逼真和准确的图像。提供深度合成模型，多画作可供选择',
+        }
+      </template>
+      <template src="component-draw-two-img.html">
+        {
+        data: [{
+        src: './img/aidraw/four_1.png',
+        },
+        {
+        src: './img/aidraw/four_2.png',
+        }]
+        }
+      </template>
+
+
+
+      <template src="component-chat-title-b.html">
+        {
+        title: '大家正在进行AI创作的热门玩法的占比',
+        }
+      </template>
+      <template src="component-draw-two-percent.html">
+        {
+        data: [{
+        percent: '68.2%',
+        text: '文案匹配生成占'
+        },{
+        percent: '41.8%',
+        text: '首选照片写实主义占'
+        }],
+        }
+      </template>
+
+
+      <template src="component-des-a.html">
+        {
+        title: '相关创作',
+        subtitle: '',
+        link: '立即探索',
+        textalign: 'text-right',
+        href: './',
+        }
+      </template>
+
+      <template src="component-normal-four-img.html">
+        {
+        data: [
+        {
+        title: '赛博朋克',
+        imgpath: './img/aidraw/link_1.png',
+        link: '立即探索',
+        href: './'
+        },
+        {
+        title: '概念人物',
+        imgpath: './img/aidraw/link_2.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '抽象空间',
+        imgpath: './img/aidraw/link_3.png',
+        link: '立即探索',
+        href: './'
+        },{
+        title: '数字艺术',
+        imgpath: './img/aidraw/link_4.png',
+        link: '立即探索',
+        href: './'
+        },
+        ]
+        }
+      </template>
+      <template src="component-des-a.html">
+        {
+        title: '产品优势',
+        subtitle: '开放蓝天AI大模型胜任多场景需求，从实时天气查询、影音娱乐到机票预订，在同一个窗口完成更多场景化任务。接入互联网，获取实时资讯信息，并且在垂直领域获得源源不断的知识补充，实现更全面的大模型。',
+        link: '立即探索',
+        href: './',
+        }
+      </template>
+
+      <!-- 加入我们 -->
+      <template src="component-join.html">
+        {
+        title: '加入我们，共同体验技术的革新。',
+        btnText: '查看详情',
+        href: './',
+        }
+      </template>
+    </div>
+
+    <template src="page-footer.html">
+
+
+  </body>
+
+
+  <template src="page-foot.html">
+
+  </template>
+
+</body>
+
+</html>
