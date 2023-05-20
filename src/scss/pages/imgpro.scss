@@ -1,0 +1,38 @@
+.aichat_first-container {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+  overflow: hidden;
+  .title {
+    padding-right: 150px;
+    font-size: var( --font-72);
+    color: var( --text-color);
+  }
+ 
+  .experience {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    .mtBtn {
+      flex: 0 0 110px;
+      padding: 4px 11px 6px 11px;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 1px solid var( --text-color);
+      color: var( --text-color);
+    }
+    .mtBtn:hover {
+      background-color: var( --text-color);
+      color: var( --bg-color);
+      i {
+        color: var( --bg-color);
+      }
+    }
+  }
+}
+.background {
+  margin-top: 96px;
+  width: 100%;
+}
