@@ -69,6 +69,9 @@ html {
     padding-top: 24px;
     padding-bottom: 24px;
   }
+  .pt-48 {
+    padding-top: 48px;
+  }
   .py-48 {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -159,6 +162,28 @@ html {
   .bg-yellow {
     background-color: var(--yellow-color) !important;
   }
+  .bg-light-blue {
+    background-color: var(--light-blue-color) !important;
+  }
+  .bg-blue {
+    background-color: var(--blue-color) !important;
+  }
+  .bg-pink {
+    background-color: var(--pink-color) !important;
+  }
+  .text-color-blue1 {
+    color: #0000FF !important;
+    i {
+      color: #0000FF !important;
+    }
+  }
+  .text-color-blue2 {
+    color: #010EF2 !important;
+  }
+  .text-color-red {
+    color: #DE0000 !important;
+  }
+
   @keyframes blink {
     0% {
       opacity: 0;
