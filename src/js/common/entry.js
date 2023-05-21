@@ -33,7 +33,6 @@ function changeTabTransparent() {
   // 子集 .nav-submenu 的 background-color 也要变为透明
   $('.navbar-a7ff7dddf889 .navbar-nav .nav-menu .nav-submenu').css('background-color', 'transparent')
   // navbar-brand_logo src change to logo_dark.png
-  // $('.navbar-brand img').attr('src', './img/logo_dark.png')
   $('.navbar-a7ff7dddf888').css('background-color', 'transparent')
 }
 changeTabTransparent()
@@ -42,7 +41,6 @@ $(window).scroll(function () {
   if ($(this).scrollTop() > 5) {
     $('.navbar-a7ff7dddf889').css('background-color', 'var(--bg-color)')
     $('.navbar-a7ff7dddf889 .navbar-nav .nav-menu .nav-submenu').css('background-color', 'var(--bg-color)')
-    // $('.navbar-brand img').attr('src', './img/logo_right.png')
 
     $('.navbar-a7ff7dddf888').css('background-color', 'var(--bg-color)')
   } else {

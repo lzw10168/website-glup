@@ -1,0 +1,32 @@
+.repons {
+
+  .article {
+    overflow: hidden;
+    background-color: #fff !important;
+    .row {
+      border-top: 1px solid #2d2d2d;
+      margin: 24px;
+    }
+  .row {
+    color: #000;
+    .item2 {
+      padding-right: 500px;
+    }
+    .text {
+      // margin-bottom: 42px;
+    }
+    .title {
+      margin-top: 42px;
+      font-size: var(--font-28);
+      font-weight: normal;
+    }
+  }
+}
+}
+@media screen and (max-width: 768px) {
+  .repons {
+    .item2 {
+      padding-right: 0 !important;
+    }
+  }
+}
