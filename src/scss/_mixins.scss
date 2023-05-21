@@ -171,11 +171,17 @@ html {
   .bg-pink {
     background-color: var(--pink-color) !important;
   }
+  .bg-white {
+    background-color: var(--text-color) !important;
+  }
   .text-color-blue1 {
     color: #0000FF !important;
     i {
       color: #0000FF !important;
     }
+  }
+  .text-color-black {
+    color: #000000 !important;
   }
   .text-color-blue2 {
     color: #010EF2 !important;
@@ -183,7 +189,17 @@ html {
   .text-color-red {
     color: #DE0000 !important;
   }
+  .text-color-brown {
+    color: #833600 !important;
+  }
 
+  .shade {
+    &.bg-white {
+      .bg-primary {
+        background-color: var(--blue-color) !important;
+      }
+    }
+  }
   @keyframes blink {
     0% {
       opacity: 0;
